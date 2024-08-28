@@ -5,7 +5,7 @@ spring:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
     topic:
       notificacao-usuario: notificacao-usuario
-      notificacao-usuario-dlt: notificacao-usuario-dlt
+      notificacao-usuario-dlt: notificacao-usuario.DLT
     consumer:
       group-id: notificacao-group
       auto-offset-reset: latest

@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 public class EmailService {
 
     public void enviarEmail(Evento evento){
+        if (evento.getDados().getEmail().isBlank()){
+            log.error("Erro ao enviar email");
+            throw new RuntimeException();
+        }
         log.info("Email enviado com sucesso para : {}", evento.getDados().getEmail());
     }
 }

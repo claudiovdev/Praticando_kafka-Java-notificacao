@@ -23,6 +23,5 @@ public class NotificacaoConsumer {
         log.info("Evento {} recebido do topico notificacao-usuario", payload);
         var evento = jsonUitls.toEvento(payload);
         emailService.enviarEmail(evento);
-
     }
 }
