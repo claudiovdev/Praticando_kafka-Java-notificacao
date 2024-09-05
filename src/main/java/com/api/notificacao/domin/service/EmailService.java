@@ -11,7 +11,7 @@ public class EmailService {
     public void enviarEmail(Evento evento){
         if (evento.getDados().getEmail().isBlank()){
             log.error("Erro ao enviar email");
-            throw new RuntimeException();
+            throw new RuntimeException("Não foi possivel localizar um email preenchido");
         }
         log.info("Email enviado com sucesso para : {}", evento.getDados().getEmail());
     }

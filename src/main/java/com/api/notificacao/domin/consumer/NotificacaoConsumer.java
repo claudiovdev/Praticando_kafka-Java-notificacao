@@ -1,5 +1,6 @@
 package com.api.notificacao.domin.consumer;
 
+import com.api.notificacao.domin.model.Evento;
 import com.api.notificacao.domin.service.EmailService;
 import com.api.notificacao.domin.utils.JsonUitls;
 import lombok.AllArgsConstructor;
@@ -21,7 +22,7 @@ public class NotificacaoConsumer {
     )
     public void consumerNotificacaoUsuario(String payload){
         log.info("Evento {} recebido do topico notificacao-usuario", payload);
-        var evento = jsonUitls.toEvento(payload);
+        Evento evento = jsonUitls.toEvento(payload);
         emailService.enviarEmail(evento);
     }
 }
