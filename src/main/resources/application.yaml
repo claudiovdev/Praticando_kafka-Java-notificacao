@@ -10,7 +10,7 @@ spring:
       group-id: notificacao-group
       auto-offset-reset: latest
   datasource:
-    url: jdbc:mysql://${DB_HOST://localhost:3306/api-notificacao}?createDatabaseIfNotExist=true
+    url: jdbc:mysql://${DB_HOST:localhost:3306/api-notificacao}?createDatabaseIfNotExist=true
     username: ${DB_USER:root}
     password: ${DB_PASSWORD:root123}
   jpa:
